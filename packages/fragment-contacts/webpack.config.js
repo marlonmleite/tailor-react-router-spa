@@ -4,12 +4,12 @@ module.exports = {
   entry: './app/index.js',
   output: {
     path: __dirname + '/public',
-    publicPath: 'http://localhost:5000/public/',
+    publicPath: 'http://localhost:8080/public/',
     filename: 'bundle.js',
     libraryTarget: 'amd'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js(x)?$/,
         exclude: /node_modules/,

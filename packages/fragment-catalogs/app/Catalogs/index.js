@@ -10,7 +10,6 @@ class Catalogs extends Component {
       </div>
     )
   }
-
 }
 
 export default Catalogs

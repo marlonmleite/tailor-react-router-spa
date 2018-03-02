@@ -7,6 +7,7 @@
     "start": "node tailor.js",
     "install-fragment-dependencies": "lerna bootstrap",
     "build-fragments": "lerna run build",
+    "watch-fragments": "lerna run watch",
     "start-fragments": "lerna run start --stream --parallel"
   },
   "repository": {
@@ -27,6 +28,6 @@
     "eslint-plugin-react": "^7.5.1",
     "lerna": "^2.5.1",
     "node-tailor": "^3.4.0",
-    "webpack": "^3.8.1"
+    "webpack": "^4.0.1"
   }
 }
