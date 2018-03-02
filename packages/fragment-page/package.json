@@ -1,5 +1,5 @@
 {
-  "name": "fragment-header",
+  "name": "fragment-page",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,8 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "react-router": "3.2.0"
   },
   "scripts": {
     "build": "webpack -p",

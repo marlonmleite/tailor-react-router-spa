@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <style>
     body {
@@ -7,23 +8,27 @@
     }
   </style>
   <script>
-    (function(d) {
+    (function (d) {
       require(d);
-      var arr = [ 'react', 'react-dom', 'classnames' ];
-      while (i = arr.pop())(function(dep) {
-        define(dep, d, function(b) {
+      var arr = ['react', 'react-dom', 'react-router', 'classnames'];
+      while (i = arr.pop()) (function (dep) {
+        define(dep, d, function (b) {
           return b[dep];
         })
       })(i);
     }(['http://localhost:6006/public/bundle.js']));
   </script>
 </head>
+
 <body>
-  <div id="header"></div>
+  <div id="page"></div>
+  <div id="catalogs"></div>
   <div id="contacts"></div>
   <div id="chat"></div>
-  <fragment src="http://localhost:8081"></fragment>
+  <fragment src="http://localhost:8280"></fragment>
   <fragment src="http://localhost:5000"></fragment>
   <fragment src="http://localhost:3000"></fragment>
+  <fragment src="http://localhost:8181"></fragment>
 </body>
+
 </html>

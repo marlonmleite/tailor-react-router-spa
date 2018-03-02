@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import './styles.scss'
 import NavItem from '../NavItem'
 import Logo from '../Logo'
@@ -11,7 +12,7 @@ class Header extends Component {
     super(props)
     this.state = {
       name: 'Test',
-      active: 1
+      active: 0
     }
   }
 
@@ -24,25 +25,20 @@ class Header extends Component {
   }
 
   render() {
-    return(
-      <div onClick={() => { this.toggle()}} className="header">
-        <Logo/>
-        {
-          items.map((item, index) => {
-            return(
-              <NavItem
-                active={index === this.state.active}
-                index={index}
-                onClick={(index) => this.selectNavItem(index)}
-                key={index}
-              />
-            )
-          })
-        }
+    return (
+      <div className="header" onClick={() => this.selectNavItem(0)}>
+        <Link to="/">
+          <Logo/>
+        </Link>
+        <Link to="/contacts">
+          <NavItem active={1 === this.state.active} onClick={() => this.selectNavItem(1)}/>
+        </Link>
+        <Link to="/catalogs">
+          <NavItem active={2 === this.state.active} onClick={() => this.selectNavItem(2)}/>
+        </Link>
       </div>
     )
   }
-
 }
 
 export default Header

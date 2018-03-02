@@ -4,18 +4,15 @@ import './styles.scss'
 import classNames from 'classnames'
 
 class NavItem extends Component {
-
-  handleClick() {
-    this.props.onClick(this.props.index)
-  }
-
   render() {
+    const { onClick, active } = this.props
     const classes = classNames({
       'nav-item': true,
-      'current': this.props.active
+      'current': active
     })
-    return(
-      <div className={classes} onClick={() => this.handleClick()}></div>
+
+    return (
+      <div className={classes} onClick={onClick}></div>
     )
   }
 
@@ -23,7 +20,6 @@ class NavItem extends Component {
 
 NavItem.propTypes = {
   active: bool,
-  index: number,
   onClick: func
 }
 

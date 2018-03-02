@@ -2,16 +2,17 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: './app/index.js',
+  devtool: 'source-map',
   output: {
     path: __dirname + '/public',
-    publicPath: 'http://localhost:3000/public/',
+    publicPath: 'http://localhost:8181/public/',
     filename: 'bundle.js',
     libraryTarget: 'amd'
   },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.js(x)?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
