@@ -1,15 +1,27 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import axios from 'axios'
 import './styles.scss'
 
 class Catalogs extends Component {
   render() {
+    const { onIncrement, counter } = this.props
+
     return (
       <div className="catalogs">
-        <p>List of catalogs list</p>
+        <div>
+          List of catalogs list, total {counter}
+          <button type="button" onClick={onIncrement}>+ Increment</button>
+        </div>
       </div>
     )
   }
 }
 
-export default Catalogs
+const mapProps = (counter) => ({ counter })
+
+const mapActions = {
+  onIncrement: () => ({ type: 'INCREMENT_CATALOGS' })
+}
+
+export default connect(mapProps, mapActions)(Catalogs)
