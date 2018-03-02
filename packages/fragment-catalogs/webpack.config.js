@@ -5,12 +5,12 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: __dirname + '/public',
-    publicPath: 'http://localhost:8181/public/',
+    publicPath: 'http://localhost:8080/public/',
     filename: 'bundle.js',
     libraryTarget: 'amd'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js(x)?$/,
         exclude: /node_modules/,
