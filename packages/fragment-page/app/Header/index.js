@@ -26,8 +26,8 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="header" onClick={() => this.selectNavItem(0)}>
-        <Link to="/">
+      <div className="header">
+        <Link to="/" onClick={() => this.selectNavItem(0)}>
           <Logo/>
         </Link>
         <Link to="/contacts">
